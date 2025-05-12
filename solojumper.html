@@ -15,6 +15,57 @@
       padding: 2rem;
     }
 
+    .fancy-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      color: #00ff5f;
+      font-size: 1.2rem;
+    }
+    
+    .fancy-divider .bar {
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      height: 1px;
+      background: #00ff5f;
+      margin: 0 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .fancy-divider .bar::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      background: #00ff5f;
+      animation: pulse 2s infinite linear;
+    }
+    
+    @keyframes pulse {
+      0% {
+        left: -20px;
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      50% {
+        left: 50%;
+        opacity: 0.5;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        left: 100%;
+        opacity: 0;
+      }
+    }
+    
     .terminal {
       max-width: 900px;
       margin: auto;
@@ -76,9 +127,11 @@
     <p>&gt; But there’s a catch: fall too far... and you're back at the bottom. No checkpoints. No mercy.</p>
     <p>&gt; Can you survive the climb?</p>
 
-    <pre style="color:#444; margin: 2rem 0; text-align: center;">
-      ────────────────────────────────────────────────────────────
-    </pre>
+    <div class="fancy-divider">
+      <span>[</span>
+      <span class="bar"></span>
+      <span>]</span>
+    </div>
 
     <div class="game-info">
       <p class="comment">// Download Now:</p>
@@ -86,9 +139,11 @@
       <p>&gt; Android: <span style="color: #888;">coming soon...</span></p>
     </div>
 
-    <pre style="color:#444; margin: 2rem 0; text-align: center;">
-      ────────────────────────────────────────────────────────────
-    </pre>
+    <div class="fancy-divider">
+      <span>[</span>
+      <span class="bar"></span>
+      <span>]</span>
+    </div>
     
     <p class="comment">// Return to home</p>
     <p>&gt; <a href="/">alexbuilds.dev</a></p>
