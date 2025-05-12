@@ -108,6 +108,26 @@
         padding: 1rem;
       }
     }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .store-buttons img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+    
+    .store-buttons img:hover {
+      transform: scale(1.05);
+    }
+
   </style>
 </head>
 <body>
@@ -121,6 +141,14 @@
                                                          
       </pre>
     </div>
+
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/us/app/solo-jumper/id6742269235" target="_blank">
+        <img src="app-store.png" alt="Download on the App Store" />
+      </a>
+      <img src="google-play.png" alt="Coming soon on Google Play" />
+    </div>
+
 
     <p class="comment">// Solo Jumper</p>
     <p>&gt; Solo Jumper is a brutally hard vertical platformer with beautiful pixel art and one simple goal: reach the top.</p>
